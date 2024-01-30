@@ -27,3 +27,42 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+list = [
+   {"name" => "ben", "amount" = 0},
+   {"name" => "brian", "amount" = 0},
+   {"name" => "evan", "amount" = 0},
+   {"name" => "anthony", "amount" = 0}
+]
+
+index = 0
+
+loop do 
+  # Break the loop if reach max length
+      if blockchain.length == index   
+          break
+      end
+      
+      loop do 
+        x= blockchain["from_user"][index] 
+        y = blockchain["to_user"][index] 
+        z = blockchain["amount"][index] 
+
+        list["name"][x]["amount"] = list["name"][x]["amount"] - z
+        list["name"][y]["amount"] = list["name"][y]["amount"] + z
+      end
+  # increment index
+  index = index+1
+
+end 
+
+index = 0
+
+loop do 
+  if list.length == index   
+    break
+end
+
+puts "{list["name"][index]} Kellogg Chains Balance is {list["amount"][index]}"
+
+end 
